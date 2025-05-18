@@ -50,7 +50,7 @@ platforms = expand_cxxstring_abis(platforms)
 
 # The products that we will ensure are always built
 products = [
-            LibraryProduct("libpower_grid_model_c", :libpower_grid_model_c)
+            LibraryProduct("libpower_grid_model_c", :libpower_grid_model_c; dont_dlopen=true)
            ]
 
 # Dependencies that must be installed before this package can be built
