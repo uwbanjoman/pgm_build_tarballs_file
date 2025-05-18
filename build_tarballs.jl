@@ -3,11 +3,11 @@
 using BinaryBuilder, Pkg
 
 name = "libpower_grid_model_c"
-version = v"1.10.108"
+version = v"1.10.112"
 
 # Collection of sources required to complete build
 sources = [
-    ArchiveSource("https://github.com/PowerGridModel/power-grid-model/releases/download/v$(version)/power_grid_model-$(version).tar.gz", "e7ca831fa3e13a2ad9a0d6a1e4b167dd711ab93aec55d98729be6c5b9312a7c6"),
+    ArchiveSource("https://github.com/PowerGridModel/power-grid-model/releases/download/v$(version)/power_grid_model-$(version).tar.gz", "784fcb72f63b194970b14f0fd926cc2b7b31d165c171964c81646298788ae414"),
     DirectorySource("./bundled")
 ]
 
@@ -17,7 +17,7 @@ cd $WORKSPACE/srcdir
 for f in ${WORKSPACE}/srcdir/patches/*.patch; do
     atomic_patch -p1 ${f}
 done
-cd power_grid_model-1.10.108/power_grid_model_c
+cd power_grid_model-1.10.112/power_grid_model_c
 apk del cmake
 wget https://github.com/Kitware/CMake/releases/download/v3.31.2/cmake-3.31.2-linux-x86_64.sh
                                         chmod +x cmake-3.31.2-linux-x86_64.sh
@@ -38,7 +38,7 @@ platforms = [
              Platform("x86_64", "windows"; cpu_target="x86_64_v3", cxxstring_abi=:cxx11, march="avx2"),
              #Platform("x86_64", "windows"; cpu_target="znver2", cxxstring_abi=:cxx11, march="avx2"),
              Platform("x86_64", "windows"; cpu_target="znver3", cxxstring_abi=:cxx11, march="avx2"),
-             #Platform("x86_64", "linux"; libc="glibc", cpu_target="znver2", cxxstring_abi=:cxx11, march="avx2"),
+             Platform("x86_64", "linux"; libc="glibc", cpu_target="znver2", cxxstring_abi=:cxx11, march="avx2"),
              #Platform("x86_64", "linux"; libc="glibc", cpu_target="znver3", cxxstring_abi=:cxx20, march="avx2"),
              #Platform("x86_64", "windows"; cpu_target="x86_64_v4", cxxstring_abi=:cxx11, march="avx2"),       
              #Platform("x86_64", "windows"; cpu_target="x86_64_v4", cxxstring_abi=:cxx11, march="avx512"),
