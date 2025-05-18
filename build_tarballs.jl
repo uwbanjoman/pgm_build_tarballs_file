@@ -34,7 +34,7 @@ exit
 # platforms are passed in on the command line
 platforms = [
              Platform("x86_64", "linux"; libc = "glibc", cpu_target="x86_64_v3", cxxstring_abi=:cxx11),
-             #Platform("x86_64", "windows"; cpu_target="x86_64_v3", cxxstring_abi=:cxx11, march="avx2"),
+             Platform("x86_64", "windows"; cpu_target="x86_64_v3", cxxstring_abi=:cxx11, march="avx2"),
              #Platform("x86_64", "windows"; cpu_target="znver2", cxxstring_abi=:cxx11, march="avx2"),
              Platform("x86_64", "windows"; cpu_target="znver3", cxxstring_abi=:cxx11, march="avx2"),
              #Platform("x86_64", "linux"; libc="glibc", cpu_target="znver2", cxxstring_abi=:cxx11, march="avx2"),
