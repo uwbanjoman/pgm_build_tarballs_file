@@ -42,6 +42,7 @@ platforms = [
              #Platform("x86_64", "linux"; libc="glibc", cpu_target="znver3", cxxstring_abi=:cxx20, march="avx2"),
              #Platform("x86_64", "windows"; cpu_target="x86_64_v4", cxxstring_abi=:cxx11, march="avx2"),       
              #Platform("x86_64", "windows"; cpu_target="x86_64_v4", cxxstring_abi=:cxx11, march="avx512"),
+             Platform("aarch64", "linux"; libc="glibc", cpu_target="cortex_a57", cxxstring_abi=:cxx11),
              #Platform("aarch64", "macos"; cpu_target="apple_m2") # fatal error: 'concepts' file not found (/include/power_grid_model/auxiliary/dataset_fwd.hpp:9:10: fatal error: 'concepts' file not found)
              #Platform("riscv64", "linux"; cpu_target="rv64gc") #, mabi=ip64d) # complaint about no-boost implementation
             ]
