@@ -1,13 +1,13 @@
-diff --git before/power_grid_model-1.10.108/power_grid_model_c/CMakeLists.txt after/power_grid_model-1.10.108/power_grid_model_c/CMakeLists.txt
+diff --git before/power_grid_model-1.10.108/power_grid_model_c/CMakeLists.txt after/power_grid_model-1.10.112/power_grid_model_c/CMakeLists.txt
 index 6983513..2cd11e4 100644
 --- before/power_grid_model-1.10.108/power_grid_model_c/CMakeLists.txt
-+++ after/power_grid_model-1.10.108/power_grid_model_c/CMakeLists.txt
++++ after/power_grid_model-1.10.112/power_grid_model_c/CMakeLists.txt
 @@ -1,6 +1,51 @@
  # SPDX-FileCopyrightText: Contributors to the Power Grid Model project <powergridmodel@lfenergy.org>
  #
  # SPDX-License-Identifier: MPL-2.0
 +cmake_minimum_required (VERSION 3.23)
-+project (powergridmodel_c VERSION 1.10.108)
++project (powergridmodel_c VERSION 1.10.112)
 +
 +option(PGM_ENABLE_TESTS "Enable tests" OFF)
 +
