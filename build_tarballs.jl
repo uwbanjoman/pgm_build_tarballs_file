@@ -33,6 +33,7 @@ exit
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
 platforms = [
+             Platform("x86_64", "linux"; libc = "glibc", cpu_target="x86_64_v2", cxxstring_abi=:cxx11),
              Platform("x86_64", "linux"; libc = "glibc", cpu_target="x86_64_v3", cxxstring_abi=:cxx11),
              Platform("x86_64", "linux"; libc = "glibc", cpu_target="x86_64_v4", cxxstring_abi=:cxx11),
              Platform("x86_64", "windows"; cpu_target="x86_64_v3", cxxstring_abi=:cxx11, march="avx2"),
