@@ -7,4 +7,4 @@ see more about BinaryBuilder.jl at https://github.com/JuliaPackaging/BinaryBuild
 
 see more about artifacts at https://julialang.org/blog/2019/11/artifacts/
 
-a collection of build recipies can be found at https://github.com/JuliaPackaging/Yggdrasil
+a collection of other build recipies can be found at https://github.com/JuliaPackaging/Yggdrasil
