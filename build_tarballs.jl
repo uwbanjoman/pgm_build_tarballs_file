@@ -24,12 +24,11 @@ wget https://github.com/Kitware/CMake/releases/download/v3.31.2/cmake-3.31.2-lin
                                         ./cmake-3.31.2-linux-x86_64.sh --prefix=/usr/local --exclude-subdir
                                         export PATH=/usr/local/cmake/bin:$PATH
 export LD_LIBRARY_PATH="${PWD}/destdir/lib:${LD_LIBRARY_PATH}"
-cmake -B build -DCMAKE_INSTALL_PREFIX=${prefix} -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TARGET_TOOLCHAIN} -DBoost_INCLUDE_DIR=${includedir} -DCMAKE_CXX_STANDARD=20 -DCMAKE_CXX_FLAGS="$CXXFLAGS" -DCMAKE_BUILD_TYPE=Release
+cmake -B build -DCMAKE_INSTALL_PREFIX=${prefix} -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TARGET_TOOLCHAIN} -DCMAKE_CXX_STANDARD=20 -DCMAKE_CXX_FLAGS="$CXXFLAGS" -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel ${nproc}
 cmake --install build
 exit
 """
-# -DBOOST_ROOT=${libdir${Boost_jll}} -DBoost_INCLUDE_DIR=${includedir} -DBoost_NO_SYSTEM_PATHS=ON 
 
 # These are the platforms we will build for by default, unless further
 # platforms are passed in on the command line
